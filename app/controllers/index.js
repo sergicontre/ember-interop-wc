@@ -1,10 +1,17 @@
 import Controller from '@ember/controller';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
     title: 'My LitElement Bank',
-    info: 'Hola',
+    toast: service(),
+    
     sendInfo(event) {
-        this.set('info', JSON.stringify(event.detail)) 
-        console.log('====>', event.detail)
+        const { type, detail } = event;
+        const toast = this.get('toast');
+        const options = {
+            progressBar: false,
+            closeButton: false
+          };
+        toast.info(`Detail: ${JSON.stringify(detail)}`, `Event: ${type}`, options);
     }
 });
