@@ -28,7 +28,7 @@ export default Component.extend({
       .filter(([key]) => key.startsWith('on-'))
       .map(([key, value]) => [
         key.replace('on-', ''),
-        value.value.bind(this)
+        value
       ]);
 
     this.set('listeners', listeners);
