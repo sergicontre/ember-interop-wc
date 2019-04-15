@@ -17,6 +17,9 @@
     "start": "ember serve",
     "test": "ember test"
   },
+  "dependencies": {
+    "my-credit-card": "~0.1.2"
+  },
   "devDependencies": {
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
