@@ -1,5 +1,8 @@
-<ElementEventListener @on-credit-card-details={{sendInfo}}>
+<ElementEventListener @on-credit-card-details={{action "sendInfo"}}>
     <my-credit-card title={{title}}></my-credit-card>
 </ElementEventListener>
 
 <h3>(*) Fill data and click over VISA icon and see how Ember Framework listen credit card info event from Web Component and show in toast</h3>
+
+<p>Event detail:</p>
+<pre><code>{{result}}</code></pre>
